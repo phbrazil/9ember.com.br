@@ -11,7 +11,7 @@ $(function() {
             var email = $("input#emailSub").val();
 
             $.ajax({
-                url: "subscribe.jsp",
+                url: "http://www.opportunity-web.com.br/subscribe.jsp",
                 type: "POST",
                 data: {
                     email: email
