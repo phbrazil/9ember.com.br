@@ -43,16 +43,16 @@ $(function() {
                 error: function() {
                     
                       // Success message
-                    $('#success').html("<div class='alert alert-success'>");
-                    $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                    $('#success').html("<div class='alert alert-danger'>");
+                    $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
-                    $('#success > .alert-success')
-                        .append("<strong>Sua mensagem foi enviada. Obrigado! </strong>");
-                    $('#success > .alert-success')
+                    $('#success > .alert-danger')
+                        .append("<strong>Ocorreu um erro, tente novamente mais tarde! </strong>");
+                    $('#success > .alert-danger')
                         .append('</div>');
 
                     //clear all fields
-                    $('#contactForm').trigger("reset");
+                    //$('#contactForm').trigger("reset");
                     
                     /*
                     // Fail message
