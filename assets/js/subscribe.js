@@ -9,11 +9,9 @@ $(function () {
             event.preventDefault(); // prevent default submit behaviour
             // get values from FORM
             var email = $("input#emailSub").val();
-            
-            console.log(email);
 
             $.ajax({
-                url: "https://www.cyberoficina.com.br/subscribe",
+                url: "http://www.cyberoficina.com.br/subscribe",
                 //url: "http://localhost:8080/CyberOficina/subscribe",
                 type: "POST",
                 data: {
@@ -31,9 +29,8 @@ $(function () {
                             .append('</div>');
                     $('#successSubscribe').delay(5000).fadeOut('slow');
 
-
                     //clear all fields
-                    $('#successSubscribe').trigger("reset");
+                    $('#subscribe').trigger("reset");
                 },
                 error: function () {
                     // Fail message
@@ -43,7 +40,7 @@ $(function () {
                     $('#successSubscribe > .alert-danger').append("<strong>Desculpe " + email + ", aparentemente nossos servidores não estão respondendo. Por favor tente novamente mais tarde!");
                     $('#successSubscribe > .alert-danger').append('</div>');
                     //clear all fields
-                    $('#successSubscribe').trigger("reset");
+                    $('#subscribe').trigger("reset");
                 },
             })
         },
@@ -60,6 +57,6 @@ $(function () {
 
 
 /*When clicking on Full hide fail/success boxes */
-$('#emailSub').focus(function () {
-    $('#successSubscribe').html('');
+$('#successSubscribe').focus(function () {
+    $('#subscribe').html('');
 });
